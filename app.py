@@ -52,4 +52,4 @@ def ask_bot():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
