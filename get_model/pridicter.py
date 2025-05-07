@@ -13,7 +13,7 @@ class CarPricePredictor:
         self.body_type=body_type
         self.engine_displacement=engine_displacement
         self.driven=driven
-        self.model_path ='trainer/model2.pkl'
+        self.model_path ='model/model2.pkl'
         self.model2 = self.get_model()
         self.car_data=self.car_data()
     def car_data(self):

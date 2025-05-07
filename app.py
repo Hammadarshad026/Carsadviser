@@ -1,7 +1,7 @@
 
 from flask import Flask, render_template, request, jsonify
 from advisor import get_car_advice
-from model.pridicter import CarPricePredictor
+from get_model.pridicter import CarPricePredictor
 
 app = Flask(__name__)
 
