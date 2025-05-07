@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome | Car Price Predictor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: url('static/assets/bg.png') no-repeat center center fixed;
+            background-size: cover;
+            /* background: linear-gradient(to right, #0f2027, #203a43, #2c5364); */
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        .welcome-box {
+            background: rgba(0,0,0,0.6);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            max-width: 600px;
+        }
+        .welcome-box h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .welcome-box p {
+            font-size: 1.2rem;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+        .btn-custom {
+            background-color:#93c6e0;
+            border: none;
+            font-size: 1.1rem;
+            padding: 12px 30px;
+            border-radius: 50px;
+            transition: 0.3s;
+        }
+        .btn-custom:hover {
+            background-color: #ffa726;
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-box">
+        <h1> Car Price Predictor</h1>
+        <p>Discover the estimated market value of your vehicle instantly using AI & ML technology. Just enter a few car details and get a prediction!</p>
+        <a href="/price_pridicter" class="btn btn-custom"><b>Start Predicting</b></a>
+    </div>
+    <div style="position: fixed; bottom: 10px; right: 10px; font-size: 12px; color: #aaa;">
+        Developed by Hammad Arshad
+      </div>
+
+</body>
+</html>
