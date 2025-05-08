@@ -2,7 +2,7 @@
 from flask import Flask, render_template, request, jsonify
 from advisor import get_car_advice
 from get_model.pridicter import CarPricePredictor
-
+from scrapper.img_scrapper import imgLink_scrapper
 app = Flask(__name__)
 
 # Price prediction helper
@@ -24,6 +24,8 @@ def main():
 @app.route('/price_pridicter', methods=['GET', 'POST'])
 def price_pridicter():
     car_price = None
+    
+    car_image = None
     if request.method == 'POST':
         Model_Name = request.form.get('Model_Name')
         Manufacturer = request.form.get('Manufacturer')
@@ -39,8 +41,10 @@ def price_pridicter():
         car_price = get_car_class(Model_Name, Manufacturer, Registered_In, Model_Date,
                                   Fuel_Type, Transmission, Color, Body_Type,
                                   Engine_Displacement, Driven)
+        
+        car_image=imgLink_scrapper(Manufacturer, Model_Name,Model_Date)
 
-    return render_template('price_pridicter.html', car_price=car_price)
+    return render_template('price_pridicter.html', car_price=car_price , car_image=car_image)
 
 
 # Chatbot AJAX Endpoint
@@ -52,4 +56,4 @@ def ask_bot():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
